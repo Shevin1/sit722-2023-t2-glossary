@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/glo_style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome <%= sub %></p>
+   <table class ="gloss">
+    
+    <thead>
+      <tr>
+      <th>ID</th>
+      <th>Term</th>
+      <th>Description</th>
+      <th>References</th>
+      </tr>
+      </thead>
+      <tfoot>
+        <%names.forEach((name) => { %>
+        <tr>
+        <td colspan="4">
+        </td>
+        </tr>
+        </tfoot>
+
+        <tbody>
+        <tr>
+          <td>
+            <%= name.ID%>
+          </td>
+          <td>
+            <%= name.Term%>
+          </td>
+          <td>
+            <%= name.Description%>
+          </td>
+          <td>
+            <%= name.References%>
+          </td>
+        </tr>
+        </tbody>
+        </tr>
+          <% }); %>
+
+   </table>
+  </body>
+</html>
